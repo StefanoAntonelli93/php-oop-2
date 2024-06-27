@@ -37,8 +37,10 @@ $fish = new Category('Acquario', 'icona');
 $bird = new Category('Uccelli', 'icona');
 $reptile = new Category('Rettili', 'icona');
 
-var_dump($dog);
-var_dump($cat);
-var_dump($fish);
-var_dump($bird);
-var_dump($reptile);
+// var_dump($dog);
+// var_dump($cat);
+// var_dump($fish);
+// var_dump($bird);
+// var_dump($reptile);
+
+// echo $dog->getName();
