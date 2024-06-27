@@ -11,3 +11,19 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
 - I prodotti saranno oltre al _cibo_, anche _giochi_, _cucce_, etc.
 
 Stampiamo delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di articolo che si sta visualizzando (prodotto, cibo, gioco, cuccia).
+
+---
+
+ereditarietà
+
+file per ogni classe da realizzare
+
+traits
+
+type declaration
+
+polimorfismo
+
+nullsafe
+
+si potrebbe usare la composizione ma esercizio chiede ereditarietà
