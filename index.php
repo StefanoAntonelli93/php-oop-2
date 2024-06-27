@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/models/Product.php';
 require_once __DIR__ . '/models/Category.php';
+// richiamo array
+require_once __DIR__ . '/models/Array_Products.php';
 ?>
 
 
@@ -20,6 +22,7 @@ require_once __DIR__ . '/models/Category.php';
 </head>
 
 <body>
+    <!-- header -->
     <header>
         <div class="content p-3 bg-warning ">
             <div class="row justify-content-between text-align-center">
@@ -43,6 +46,25 @@ require_once __DIR__ . '/models/Category.php';
             </ul>
         </div>
     </header>
+    <!-- main -->
+    <main>
+        <div class="container py-5">
+            <div class="row row-cols-4">
+                <?php foreach ($Products as $product) : ?>
+                    <div class="col">
+                        <div class="card bg-secondary-subtle p-3">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $product->getName() ?></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-warning w-100">Aggiungi al carrello</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

@@ -52,5 +52,6 @@ class Product
     }
 }
 
-$prodotto1 = new Product('palla', $dog);
+$prodotto1 = new Product('Palla', $dog);
+$prodotto2 = new Product('Guinzaglio', $dog);
 var_dump($prodotto1);
