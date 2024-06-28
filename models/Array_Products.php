@@ -1,2 +1,3 @@
 <?php
-$Products = [$prodotto1, $prodotto2];
+
+$Products = [$croccantiniDog, $croccantiniCat];

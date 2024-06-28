@@ -6,6 +6,7 @@ class Product
     // passo Category attraverso composizione
     protected Category $category;
     protected string $name;
+    protected string $brand;
     protected float $price = 0;
     protected  ?string $description = null;
     // costruttore
@@ -23,6 +24,16 @@ class Product
     {
         return $this->name;
     }
+    // setter e getter
+    public function setBrand(string $_brand): void
+    {
+        $this->name = $_brand;
+    }
+    public function getBrand(): string
+    {
+        return $this->brand;
+    }
+
     // setter e getter
     public function setPrice(float $_price): void
     {
@@ -52,6 +63,6 @@ class Product
     }
 }
 
-$prodotto1 = new Product('Palla', $dog);
-$prodotto2 = new Product('Guinzaglio', $dog);
-var_dump($prodotto1);
+// $palla = new Product('Palla', $dog);
+// $guinzaglio = new Product('Guinzaglio', $dog);
+// var_dump($prodotto1);

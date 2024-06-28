@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/models/Product.php';
 require_once __DIR__ . '/models/Category.php';
+require_once __DIR__ . '/models/Food.php';
 // richiamo array
 require_once __DIR__ . '/models/Array_Products.php';
 ?>
@@ -55,8 +56,13 @@ require_once __DIR__ . '/models/Array_Products.php';
                         <div class="card bg-secondary-subtle p-3">
                             <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><?php echo $product->getName() ?></h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h3>Nome: <?php echo $product->getName() ?></h3>
+                                <p class="card-title">Ingredienti:<?php if ($product->getIngredients() ?? []) : ?>
+                                    <?php echo implode(', ', $product->getIngredients()) ?>
+                                <?php else : ?>
+                                    N/A.
+                                <?php endif; ?>
+                                </p>
                                 <a href="#" class="btn btn-warning w-100">Aggiungi al carrello</a>
                             </div>
                         </div>
