@@ -31,11 +31,11 @@ class Category extends Product
     }
 }
 
-$dog = new Category('Cane', 'icona');
-$cat = new Category('Gatto', 'icona');
-$fish = new Category('Acquario', 'icona');
-$bird = new Category('Uccelli', 'icona');
-$reptile = new Category('Rettili', 'icona');
+$dog = new Category('Cane', '<i class="fa-solid fa-dog"></i>');
+$cat = new Category('Gatto', '<i class="fa-solid fa-cat"></i>');
+$fish = new Category('Acquario', '<i class="fa-solid fa-fish-fins"></i>');
+$bird = new Category('Uccelli', '<i class="fa-solid fa-crow"></i>');
+$reptile = new Category('Rettili', '<i class="fa-solid fa-dragon"></i>');
 
 // var_dump($dog);
 // var_dump($cat);
