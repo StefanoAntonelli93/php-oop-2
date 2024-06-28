@@ -27,7 +27,7 @@ class Product
     // setter e getter
     public function setBrand(string $_brand): void
     {
-        $this->name = $_brand;
+        $this->brand = $_brand;
     }
     public function getBrand(): string
     {

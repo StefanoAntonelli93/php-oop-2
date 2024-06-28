@@ -39,22 +39,22 @@ class Food extends Product
         return $this->data;
     }
 }
-
+// istanze
 $croccantiniDog = new Food('Crocchette per cani', $dog);
 $croccantiniDog->setIngredients(['Pollo', 'Manzo', 'Coniglio']);
 $croccantiniDog->setPrice('29.99');
 
 $croccantiniCat = new Food('Crocchette per gatti', $cat);
 $croccantiniCat->setIngredients(['Verdure', 'Tonno', 'Latte']);
-$croccantiniCat->setPrice('29.99');
+$croccantiniCat->setPrice('19.99');
 
 $snackDog = new Food('Snack per cani', $dog);
 $snackDog->setIngredients(['Cereali', 'Carni e derivati']);
-$snackDog->setPrice('29.99');
+$snackDog->setPrice('9.99');
 
 $snackCat = new Food('Snack per gatti ', $cat);
 $snackCat->setIngredients(['Cereali', 'Carni e derivati']);
-$snackCat->setPrice('29.99');
+$snackCat->setPrice('8.99');
 
 // var_dump($croccantiniDog);
 // var_dump($croccantiniCat);

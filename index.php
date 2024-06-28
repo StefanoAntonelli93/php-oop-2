@@ -2,6 +2,7 @@
 require_once __DIR__ . '/models/Product.php';
 require_once __DIR__ . '/models/Category.php';
 require_once __DIR__ . '/models/Food.php';
+require_once __DIR__ . '/models/Game.php';
 // richiamo array
 require_once __DIR__ . '/models/Array_Products.php';
 ?>
@@ -25,8 +26,8 @@ require_once __DIR__ . '/models/Array_Products.php';
 <body>
     <!-- header -->
     <header>
-        <div class="content p-3 bg-warning ">
-            <div class="row justify-content-between text-align-center">
+        <div class="content bg-warning ">
+            <div class="row justify-content-between text-align-center p-3">
                 <div class="col-3">
                     <h1 class="fw-bold">
                         Boonimal Shop
@@ -37,7 +38,7 @@ require_once __DIR__ . '/models/Array_Products.php';
                 </div>
                 <div class="col-3 align-self-center text-end">Accedi o Registrati</div>
             </div>
-            <ul class="d-flex justify-content-between p-3 list-unstyled fs-5">
+            <ul class="d-flex justify-content-around p-3 list-unstyled fs-5">
                 <li>Cane</li>
                 <li>Gatto</li>
                 <li>Piccoli Animali</li>
@@ -49,6 +50,7 @@ require_once __DIR__ . '/models/Array_Products.php';
     </header>
     <!-- main -->
     <main>
+        <!-- FOOD -->
         <h2 class="fw-bold p-3">Cibo</h2>
         <div class="container py-5">
             <div class="row row-cols-4">
@@ -73,24 +75,21 @@ require_once __DIR__ . '/models/Array_Products.php';
                 <?php endforeach ?>
             </div>
         </div>
+        <!-- GAMES -->
         <h2 class="fw-bold p-3">Giochi</h2>
         <div class="container py-5">
             <div class="row row-cols-4">
-                <?php foreach ($foods as $food) : ?>
+                <?php foreach ($games as $game) : ?>
                     <div class="col">
                         <div class="card bg-secondary-subtle p-4 h-100">
                             <img src="" class="card-img-top" alt="img">
                             <div class="card-body">
-                                <h3 class="fs-5"><?php echo $food->getCategory()?->getIcon() ?></h3>
-                                <h3 class="mb-4"><?php echo $food->getName() ?></h3>
-                                <div><?php echo $food->getPrice() ?> &euro;</div>
+                                <h3 class="fs-5"><?php echo $game->getCategory()?->getIcon() ?></h3>
+                                <h3><?php echo $game->getName() ?></h3>
+                                <p class="mb-3"><?php echo $game->getBrand() ?></p>
+                                <div><?php echo $game->getPrice() ?> &euro;</div>
+                                <p class="mb-3">Descrizione: <?php echo $game->getDescription() ?></p>
 
-                                <p class="card-title">Ingredienti:<?php if ($food->getIngredients() ?? []) : ?>
-                                    <?php echo implode(', ', $food->getIngredients()) ?>
-                                <?php else : ?>
-                                    N/A.
-                                <?php endif; ?>
-                                </p>
                                 <a href="#" class="btn btn-warning w-100"><i class="fa-solid fa-cart-shopping me-2"></i>Aggiungi al carrello</a>
                             </div>
                         </div>
@@ -99,6 +98,7 @@ require_once __DIR__ . '/models/Array_Products.php';
             </div>
         </div>
     </main>
+    <!-- footer -->
     <footer class="bg-warning p-4 text-center">
         <h5>
             Powered by Stefano

@@ -1,4 +1,4 @@
 <?php
 
 $foods = [$croccantiniDog, $croccantiniCat, $snackDog, $snackCat];
-$games = [];
+$games = [$peluche, $palla, $frisbee, $corda];
